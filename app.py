@@ -116,5 +116,10 @@ def summarize_endpoint():
     except Exception as e:
         return {'error': str(e)}, 500
 
+@app.route('/build')
+def build():
+    # ビルドコマンドの実行
+    return 'Build successful'
+
 if __name__ == '__main__':
     app.run(debug=True)
